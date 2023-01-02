@@ -2,9 +2,9 @@ import os
 import yaml
 
 template_dirs = [
-    '/home/rotorops/public_html/user-files/modules/scenario',
-    '/home/rotorops/public_html/user-files/modules/forces',
-    '/home/rotorops/public_html/user-files/modules/import',
+    '/scenario',
+    '/forces',
+    '/import',
     ]
     
 
