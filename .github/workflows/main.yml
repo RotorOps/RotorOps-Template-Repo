@@ -7,10 +7,10 @@ on:
 
 jobs:
 
-  Run-Map-Script:
+  Map-and-Deploy:
 
     runs-on: ubuntu-latest
-    name: Run-map-script
+    name: Map-and-Deploy
 
     steps:
     - uses: actions/checkout@v3
@@ -26,10 +26,7 @@ jobs:
       run: |
         python module-mapper.py
           
-  FTP-Deploy:
-    name: FTP-Deploy
-    runs-on: ubuntu-latest
-    steps:
+    - name: FTP-Deploy
     - uses: actions/checkout@v2.1.0
       with:
         fetch-depth: 2
