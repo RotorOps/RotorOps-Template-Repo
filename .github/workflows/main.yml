@@ -28,6 +28,12 @@ jobs:
     - name: Run script
       run: |
         python module-mapper.py
+
+    - name: Archive map file as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: module-map-file
+        path: module-map-v2.yaml
           
     - name: FTP-Deploy
       uses: actions/checkout@v2.1.0
@@ -40,5 +46,21 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: modules-test/
+        server-dir: modules/
+
+    - name: Download bundle
+      uses: actions/download-artifact@master
+      with:
+        name: module-map-file # Download artifact named...
+        path: dist # Optional, downloads to current working directory under folder {artifact_name} if not specified
+
+    - name: Deploy dist folder
+      uses: isthatcentered/dist-to-ftp@master
+      with:
+        user: ${{ secrets.FTP_USERNAME }} # Ftp user Ex:
+        password: ${{ secrets.FTP_PASSWORD }} # Ftp password Ex:
+        host: ${{ secrets.FTP_SERVER }} # Ftp host Ex:
+        path: dist # Folder to deploy Ex: apps/frontend/dist or dist
+        into: modules # Where to place the files in your ftp
+        cleanupExisting: false # (Optional), Remove already existing files inside FTP destination folder (`into` parameter)
         
