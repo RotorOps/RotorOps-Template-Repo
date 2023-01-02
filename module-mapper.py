@@ -2,9 +2,9 @@ import os
 import yaml
 
 template_dirs = [
-    'scenario',
-    'forces',
-    'import',
+    '..\\scenario',
+    '..\\forces',
+    '..\\import',
     ]
     
 
