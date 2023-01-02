@@ -1,0 +1,38 @@
+Hey again.  
+
+So this template is what will populate the zone FARPs (if the user has selected the 'Spawns at zone FARPs' option).  
+
+You can override it, like other import templates, by copying this folder to you user folder.
+
+
+*** IMPORTANT! ***
+
+If you add/change helicopters in this template, it is STRONGLY recommended that you set the fuel level to zero. 
+
+*** IMPORTANT! ***
+
+
+Why?  Because we don't have a good way to control when players can spawn somewhere.  
+
+So, if there's no fuel in the bird, the only way these become useful is when the FARP itself is activated with support vehicles for refuel/rearm.
+
+If there's fuel in the helicopter, then players can takeoff from zones that
+
+haven't been captured yet...and it defeats the purpose of the game. 
+
+
+This may change in the future, so check the wiki for the latest info.
+
+-GRIMM
+
+
+  ___     _            ___          
+ | _ \___| |_ ___ _ _ / _ \ _ __ ___
+ |   / _ \  _/ _ \ '_| (_) | '_ (_-<
+ |_|_\___/\__\___/_|  \___/| .__/__/                                
+---------------+---------- |_|-----
+          ___ /^^[___              _
+         /|^+----+   |#___________//
+       ( -+ |____|    ______-----+/
+        ==_________--'            \
+          ~_|___|__

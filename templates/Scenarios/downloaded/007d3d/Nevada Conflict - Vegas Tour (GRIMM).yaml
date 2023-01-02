@@ -1,0 +1,8 @@
+author: GRIMM
+version: 2
+type: Scenario
+name: "Nevada Conflict - Vegas Tour"
+description: "Take back Las Vegas from the enemy! Expect heavy infantry presence on the Strip."
+map: Nevada
+tags: 
+  - MultiPlayer

@@ -1,0 +1,8 @@
+author: GRIMM
+version: 2
+type: Scenario
+name: "Mariana Conflict - Anderson to Won Pat"
+description: "This tight battlefield makes for a great introduction to RotorOps. Support our troops on the ground!"
+map: Marianas
+tags: 
+  - MultiPlayer

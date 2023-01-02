@@ -1,0 +1,4 @@
+version: 1
+description: "This template is used for the 'zone protection' or 'Zone protect SAMs'"
+type: import
+author: Shagrat/GRIMM

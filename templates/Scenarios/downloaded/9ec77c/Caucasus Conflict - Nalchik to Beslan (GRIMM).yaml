@@ -1,0 +1,8 @@
+author: GRIMM
+version: 2
+type: Scenario
+name: "Caucasus Conflict - Nalchik to Beslan"
+description: "It's cold with light snow flurries.  A good map for attack helicopters. There are many parking slots available for multiplayer. Mission template by GRIMM."
+map: Caucasus
+tags: 
+  - MultiPlayer

@@ -1,0 +1,8 @@
+author: Mr. Nobody
+version: 2
+type: Scenario
+name: "Syria Conflict - Mount Olympus"
+description: "Explore this gorgeous area of the Syria map.  Destroy the enemy on the way."
+map: Syria
+tags: 
+  - MultiPlayer

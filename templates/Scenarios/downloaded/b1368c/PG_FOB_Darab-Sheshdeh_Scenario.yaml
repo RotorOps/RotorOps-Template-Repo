@@ -1,0 +1,36 @@
+name: "PG Conflict - FOB Darab-Sheshdeh"
+author: Shagrat
+version: 3
+type: Scenario
+tags: 
+  - MultiPlayer
+map: PersianGulf
+description: "Suspected insurgency HQ in Sheshdeh. Mission includes an FOB southwest of Darab with 4x AH-64D."
+player_spawn:
+checkboxes:
+    defense_checkBox: false
+    apcs_spawn_checkBox: false
+    logistics_crates_checkBox: true
+    awacs_checkBox: false
+    tankers_checkBox: false
+    zone_sams_checkBox: false
+    smoke_pickup_zone_checkBox: false
+    inf_spawn_voiceovers_checkBox: true
+    game_status_checkBox: false
+    voiceovers_checkBox: true
+    force_offroad_checkBox: false
+disable_checkboxes: zone_sams_checkBox, defense_checkBox
+spinboxes:
+    blueqty_spinBox: 3
+    redqty_spinBox: 2
+    e_attack_helos_spinBox: 0
+    e_attack_planes_spinBox: 0
+    e_transport_helos_spinBox: 0
+    troop_drop_spinBox: 0
+    inf_spawn_spinBox: 4
+radiobuttons: farp_never,
+disable_radiobuttons:
+red_forces: "Modern_Islamic_Republic_of_Iran"
+blue_forces: "Modern USMC_light"
+start_trigger: false
+end_trigger: true

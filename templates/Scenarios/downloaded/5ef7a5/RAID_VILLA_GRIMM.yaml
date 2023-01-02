@@ -1,0 +1,35 @@
+author: shagrat
+version: 2
+type: Scenario
+name: "Marianas - Raid on Villa Grimm"
+description: "<h3>UH-1H supporting a raid on drug lord estate.</h3>"
+map: Marianas
+player_spawn: fixed
+checkboxes:
+    defense_checkBox: false
+    apcs_spawn_checkBox: false
+    logistics_crates_checkBox: false
+    awacs_checkBox: false
+    tankers_checkBox: false
+    zone_sams_checkBox: false
+    smoke_pickup_zone_checkBox: false
+    inf_spawn_voiceovers_checkBox: true
+    game_status_checkBox: false
+    voiceovers_checkBox: true
+    force_offroad_checkBox: false
+disable_checkboxes: zone_sams_checkBox, force_offroad_checkBox, defense_checkBox,logistics_crates_checkBox
+spinboxes:
+    blueqty_spinBox: 1
+    redqty_spinBox: 2
+    e_attack_helos_spinBox: 0
+    e_attack_planes_spinBox: 0
+    e_transport_helos_spinBox: 0
+    troop_drop_spinBox: 0
+    inf_spawn_spinBox: 2
+radiobuttons: farp_never,
+disable_radiobuttons:
+    farp_always, farp_gunits
+red_forces: "Insurgent_infantry_only"
+blue_forces: "infantry_only"
+end_trigger: false
+    

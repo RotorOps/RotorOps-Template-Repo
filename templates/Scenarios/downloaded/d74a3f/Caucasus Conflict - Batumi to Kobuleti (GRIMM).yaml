@@ -1,0 +1,8 @@
+author: GRIMM
+type: Scenario
+version: 2
+name: "Caucasus Conflict - Batumi to Kobuleti"
+description: "It's early morning in a sparsly populated area of Caucasus.  Transit is medium distance, with plenty of open fields ripe for attack. There are many parking slots available for multiplayer. Mission template by GRIMM."
+map: Caucasus
+tags: 
+  - MultiPlayer

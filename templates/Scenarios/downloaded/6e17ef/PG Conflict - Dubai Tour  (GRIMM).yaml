@@ -1,0 +1,8 @@
+author: GRIMM
+version: 2
+type: Scenario
+name: "PG Conflict - Dubai Tour"
+description: "Weave through skyscrapers and unload on our enemies. Troop transport and/or door gunners are effective tactics in the 'Tour' urban conflict missions."
+map: PersianGulf
+tags: 
+  - MultiPlayer

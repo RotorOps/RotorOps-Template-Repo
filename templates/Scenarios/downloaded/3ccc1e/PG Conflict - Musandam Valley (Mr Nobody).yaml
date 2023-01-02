@@ -1,0 +1,8 @@
+name: "PG Conflict - Musandam Valley"
+version: 2
+author: Mr. Nobody
+type: Scenario
+description: "Bob up over the mountains and rain hellfire.  Bring more missiles than infantry."
+map: PersianGulf
+tags: 
+  - MultiPlayer

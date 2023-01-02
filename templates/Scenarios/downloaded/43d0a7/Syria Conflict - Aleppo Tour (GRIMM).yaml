@@ -1,0 +1,13 @@
+--- 
+author: GRIMM
+version: 3
+description: "It's a beautiful day in Aleppo for some urban ops! Recommend troops and/or door gunners.  Now updated with a large multiplayer FOB!"
+map: Syria
+name: "Syria Conflict - Aleppo Tour 2"
+type: Scenario
+staging_logistics_file: FOB_16_SPWN_WIDE_LIGHTED
+checkboxes:
+  logistics_crates_checkBox: true
+disable_checkboxes: logistics_crates_checkBox,
+tags: 
+  - MultiPlayer

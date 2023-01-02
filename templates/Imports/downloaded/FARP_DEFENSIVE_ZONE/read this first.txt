@@ -1,0 +1,23 @@
+
+Ahoy designers!
+
+This file is a default, required template file for the RotorOps mission generator.  
+
+If you would like to OVERRIDE this file, simply copy the folder into your 'user' folder.  Keep the .miz filename the same, and it will override the default template.  You can make modifications to it in the mission generator.  
+
+You should probably keep the overall 'footprint' of the template the same or smaller, as some missions may not have the area for something larger.
+
+For more info, see the RotorOps wiki.
+
+-GRIMM
+
+  ___     _            ___          
+ | _ \___| |_ ___ _ _ / _ \ _ __ ___
+ |   / _ \  _/ _ \ '_| (_) | '_ (_-<
+ |_|_\___/\__\___/_|  \___/| .__/__/                                
+---------------+---------- |_|-----
+          ___ /^^[___              _
+         /|^+----+   |#___________//
+       ( -+ |____|    ______-----+/
+        ==_________--'            \
+          ~_|___|__
