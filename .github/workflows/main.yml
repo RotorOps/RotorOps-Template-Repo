@@ -24,7 +24,7 @@ jobs:
         pip install PyYAML
     - name: Run script
       run: |
-        module-mapper.py
+        python module-mapper.py
           
   FTP-Deploy:
     name: FTP-Deploy
