@@ -1,0 +1,9 @@
+author: GRIMM
+version: 1
+type: Scenario
+name: "Caucasus Conflict - Sochi to Sukhumi"
+description: "Intelligence indicates the enemy is planning a bombing operation against Sochi.  Find a way to stop them!  Our ground forces are on the way to bring the fight to their doorstep at Sukhumi and take out their SA-11"
+map: Caucasus
+tags: 
+  - MultiPlayer
+  - Server
