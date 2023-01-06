@@ -1,0 +1,39 @@
+--- 
+author: GRIMM
+version: 1
+description: "A quick mission for one or two players, as part of a large airborne op. The brawn of the US military versus a small local militia.  Should be easy, right?"
+map: PersianGulf
+name: "Persian Gulf - Black Hawk Down Pt. 1"
+type: Scenario
+checkboxes:
+    logistics_crates_checkBox: false
+    defense_checkBox: false
+    apcs_spawn_checkBox: false
+    awacs_checkBox: false
+    tankers_checkBox: false
+    zone_sams_checkBox: false
+    smoke_pickup_zone_checkBox: false
+    inf_spawn_voiceovers_checkBox: false
+    game_status_checkBox: false
+    voiceovers_checkBox: true
+    force_offroad_checkBox: false
+    farp_spawn_checkBox: false
+disable_checkboxes: logistics_crates_checkBox, zone_sams_checkBox, force_offroad_checkBox, defense_checkBox, awacs_checkBox, tankers_checkBox, advanced_defenses_checkbox, farp_spawn_checkBox
+red_forces: "Insurgent Technicals and Inf"
+blue_forces: "USA Trucks and Humvees"
+spinboxes:
+    blueqty_spinBox: 2
+    redqty_spinBox: 3
+    e_attack_helos_spinBox: 0
+    e_attack_planes_spinBox: 0
+    e_transport_helos_spinBox: 0
+    troop_drop_spinBox: 0
+    inf_spawn_spinBox: 1
+radiobuttons: farp_never,
+disable_radiobuttons:
+    farp_always, farp_gunits
+tags: 
+  - SinglePlayer
+  - CoOp
+script: |
+  RotorOps.ground_speed = 200
