@@ -1,6 +1,6 @@
 --- 
 author: GRIMM
-version: 2
+version: 3
 description: "A quick mission for one or two players, as part of a large airborne op. The brawn of the US military versus a small local militia.  Should be easy, right?"
 map: PersianGulf
 name: "Persian Gulf - Black Hawk Down Pt. 1"
@@ -15,10 +15,10 @@ checkboxes:
     smoke_pickup_zone_checkBox: false
     inf_spawn_voiceovers_checkBox: false
     game_status_checkBox: false
-    voiceovers_checkBox: true
+    voiceovers_checkBox: false
     force_offroad_checkBox: false
     farp_spawn_checkBox: false
-disable_checkboxes: logistics_crates_checkBox, zone_sams_checkBox, force_offroad_checkBox, defense_checkBox, awacs_checkBox, tankers_checkBox, advanced_defenses_checkbox, farp_spawn_checkBox
+disable_checkboxes: logistics_crates_checkBox, zone_sams_checkBox, force_offroad_checkBox, defense_checkBox, awacs_checkBox, tankers_checkBox, advanced_defenses_checkbox, farp_spawn_checkBox, voiceovers_checkBox
 red_forces: "Insurgent Technicals and Inf"
 blue_forces: "USA Trucks and Humvees"
 spinboxes:
