@@ -1,9 +1,11 @@
 --- 
 author: GRIMM
-version: 3
+version: 4
 description: "A quick mission for one or two players, as part of a large airborne op. The brawn of the US military versus a small local militia.  Should be easy, right?"
 map: PersianGulf
+tags: SinglePlayer, CoOp
 name: "Persian Gulf - Black Hawk Down Pt. 1"
+player_spawn: fixed
 type: Scenario
 checkboxes:
     logistics_crates_checkBox: false
@@ -22,8 +24,8 @@ disable_checkboxes: logistics_crates_checkBox, zone_sams_checkBox, force_offroad
 red_forces: "Insurgent Technicals and Inf"
 blue_forces: "USA Trucks and Humvees"
 spinboxes:
-    blueqty_spinBox: 2
-    redqty_spinBox: 3
+    blueqty_spinBox: 4
+    redqty_spinBox: 4
     e_attack_helos_spinBox: 0
     e_attack_planes_spinBox: 0
     e_transport_helos_spinBox: 0
