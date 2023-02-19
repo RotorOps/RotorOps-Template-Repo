@@ -1,6 +1,8 @@
 author: GRIMM
-version: 2
+version: 3
 type: Scenario
+map: PersianGulf
+tags: SinglePlayer, CoOp
 name: 'Persian Gulf - Nighthawks (AH-64D)'
 description: "Fly the Apache or UH-60 in this immersive mission over a gorgeous hidden area of the Persian Gulf map. Single player or co-op."
 player_spawn: fixed
