@@ -78,7 +78,7 @@ jobs:
         farrstring=$(echo $arrstring | sed -e 's/\[ //g' -e 's/\ ]//g' -e 's/\,//g')
         files_arr=($farrstring)
         urls=""
-        for file in ${{ files_arr[@] }}; do
+        for file in ${files_arr[@]}; do
           echo "$file was changed"
           urls+="'https://dcs-helicopters.com/user-files/modules/$file',"
         done
