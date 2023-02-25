@@ -69,8 +69,13 @@ jobs:
       uses: tj-actions/changed-files@v35
       with:
         json: "true"
+        files: |
+          forces/**
+          import/**
+          scenario/**
 
-    - name: Build a list of urls from changed files
+
+    - name: Build a list of urls from changed files #the string manipulation below can likely be removed if setting the changed-files json option to false
       id: format-urls
       run: |
         echo "changed_files=${{ steps.changed-files.outputs.all_changed_files }}" >> $GITHUB_ENV
