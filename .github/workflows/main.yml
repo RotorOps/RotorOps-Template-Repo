@@ -75,15 +75,15 @@ jobs:
       run: |
         echo "changed_files=${{ steps.changed-files.outputs.all_changed_files }}" >> $GITHUB_ENV
         urls=""
-        for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+        for file in ${{ steps.changed-files.outputs.all_changed_files[@] }}; do
           echo "$file was changed"
           urls+="'https://dcs-helicopters.com/user-files/modules/$file',"
         done
         echo "URLS=${urls}"
-        echo "URLS=${urls}" >> $GITHUB_OUTPUT
+        echo "URLS=${urls}" >> $GITHUB_ENV
 
     - name: Print URLs
-      run: echo ${{ steps.format-urls.URLS }}
+      run: echo ${{ env.URLS }}
 
     - name: Purge CDN Cache
       uses: wei/curl@v1
@@ -93,5 +93,5 @@ jobs:
           --location --request POST 'https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache' \
           --header 'Content-Type: application/json' \
           --header 'Authorization: Bearer ${{ secrets.CLOUDFLARE_API_KEY }}' \
-          --data-raw '{"files": [${{ steps.format-urls.URLS }}]}'
+          --data-raw '{"files": [${{ env.URLS }}]}'
         
