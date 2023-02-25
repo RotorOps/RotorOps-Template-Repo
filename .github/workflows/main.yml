@@ -63,4 +63,34 @@ jobs:
         path: dist # Folder to deploy Ex: apps/frontend/dist or dist
         into: modules # Where to place the files in your ftp
         cleanupExisting: false # (Optional), Remove already existing files inside FTP destination folder (`into` parameter)
+
+    - name: Get monitored changed files
+      id: changed-files
+      uses: tj-actions/changed-files@v35
+      with:
+        json: "true"
+
+    - name: List all changed files and save to env
+      id: format-urls
+      run: |
+        echo "changed_files=${{ steps.changed-files.outputs.all_changed_files }}" >> $GITHUB_ENV
+        urls=""
+        for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+          echo "$file was changed"
+          urls+="'https://dcs-helicopters.com/modules/$file',"
+        done
+        echo "URLS=${urls}" >> $GITHUB_OUTPUT
+
+    - name: Print URLs
+      run: echo ${{ steps.format-urls.URLS }}
+
+    - name: Purge CDN Cache
+      uses: wei/curl@v1
+      if: steps.changed-files.outputs.any_changed
+      with:
+        args: |
+          --location --request POST 'https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache' \
+          --header 'Content-Type: application/json' \
+          --header 'Authorization: Bearer ${{ secrets.CLOUDFLARE_API_KEY }}' \
+          --data-raw '{"files": [${{ steps.format-urls.URLS }}]}'
         
