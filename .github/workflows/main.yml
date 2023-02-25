@@ -70,12 +70,15 @@ jobs:
       with:
         json: "true"
 
-    - name: List all changed files and save to env
+    - name: Build a list of urls from changed files
       id: format-urls
       run: |
         echo "changed_files=${{ steps.changed-files.outputs.all_changed_files }}" >> $GITHUB_ENV
+        arrstring=${{ steps.changed-files.outputs.all_changed_files }}
+        farrstring=$(echo $arrstring | sed -e 's/\[ //g' -e 's/\ ]//g' -e 's/\,//g')
+        files_arr=($farrstring)
         urls=""
-        for file in ${{ steps.changed-files.outputs.all_changed_files[@] }}; do
+        for file in ${{ files_arr[@] }}; do
           echo "$file was changed"
           urls+="'https://dcs-helicopters.com/user-files/modules/$file',"
         done
