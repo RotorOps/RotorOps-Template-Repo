@@ -93,9 +93,9 @@ jobs:
       run: echo ${{ env.URLS }}
 
     - name: Purge CDN Cache
-      uses: wei/curl@v1
+      uses: enflo/curl-action@v1.2
       with:
-        args: |
+        curl: |
           --location --request POST 'https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache' \
           --header 'Content-Type: application/json' \
           --header 'Authorization: Bearer ${{ secrets.CLOUDFLARE_API_KEY }}' \
