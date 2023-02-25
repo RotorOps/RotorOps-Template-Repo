@@ -67,24 +67,20 @@ jobs:
     - name: Get monitored changed files
       id: changed-files
       uses: tj-actions/changed-files@v35
-      with:
-        json: "true"
-        files: |
-          forces/**
-          import/**
-          scenario/**
+      # with:
+      #   files: |
+      #     forces/**
+      #     import/**
+      #     scenario/**
 
 
-    - name: Build a list of urls from changed files #the string manipulation below can likely be removed if setting the changed-files json option to false
+    - name: Build a list of urls from changed files
       id: format-urls
       run: |
         echo "changed_files=${{ steps.changed-files.outputs.all_changed_files }}" >> $GITHUB_ENV
-        arrstring=${{ steps.changed-files.outputs.all_changed_files }}
-        farrstring=$(echo $arrstring | sed -e 's/\[//g' -e 's/\]//g' -e 's/\,//g')
-        files_arr=($farrstring)
         urls=""
         ins_comma=false
-        for file in ${files_arr[@]}; do
+        for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
           file=$(echo $file | sed -e 's/"//g')
           echo "$file was changed"
           if $ins_comma; then urls+=","; ins_comma=true; fi
