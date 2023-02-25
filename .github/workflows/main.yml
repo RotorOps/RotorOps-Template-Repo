@@ -75,7 +75,7 @@ jobs:
       run: |
         echo "changed_files=${{ steps.changed-files.outputs.all_changed_files }}" >> $GITHUB_ENV
         arrstring=${{ steps.changed-files.outputs.all_changed_files }}
-        farrstring=$(echo $arrstring | sed -e 's/\[ //g' -e 's/\ ]//g' -e 's/\,//g')
+        farrstring=$(echo $arrstring | sed -e 's/\[//g' -e 's/\]//g' -e 's/\,//g')
         files_arr=($farrstring)
         urls=""
         for file in ${files_arr[@]}; do
@@ -90,7 +90,7 @@ jobs:
 
     - name: Purge CDN Cache
       uses: wei/curl@v1
-      if: steps.changed-files.outputs.any_changed
+      if: steps.changed-files.outputs.any_changed == 'true'
       with:
         args: |
           --location --request POST 'https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache' \
