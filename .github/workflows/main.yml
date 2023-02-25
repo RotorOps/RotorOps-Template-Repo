@@ -97,5 +97,5 @@ jobs:
       with:
         url: 'https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache'
         method: 'POST'
-        customHeaders: '{"Content-Type": "application/json", "Authorization": "Bearer ${{ secrets.CLOUDFLARE_API_KEY }}"'
+        customHeaders: '{"Content-Type": "application/json", "X-Auth-Email": "spencershepard@hotmail.com", "X-Auth-Key": "${{ secrets.CLOUDFLARE_API_KEY }}", "Authorization": "Bearer ${{ secrets.CLOUDFLARE_API_KEY }}"}'
         data: '{"files": [${{ env.URLS }}]}'
