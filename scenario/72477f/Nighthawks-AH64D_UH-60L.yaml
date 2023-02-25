@@ -19,6 +19,7 @@ checkboxes:
     game_status_checkBox: false
     voiceovers_checkBox: false
     force_offroad_checkBox: false
+    perks_checkBox: false
 disable_checkboxes: zone_sams_checkBox, force_offroad_checkBox, defense_checkBox, awacs_checkBox, tankers_checkBox, logistics_crates_checkBox, voiceovers_checkBox
 spinboxes:
     blueqty_spinBox: 4
