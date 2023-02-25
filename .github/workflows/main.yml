@@ -79,6 +79,7 @@ jobs:
         files_arr=($farrstring)
         urls=""
         for file in ${files_arr[@]}; do
+          $file=$(echo file | sed -e 's/"//g')
           echo "$file was changed"
           urls+="'https://dcs-helicopters.com/user-files/modules/$file',"
         done
@@ -90,7 +91,6 @@ jobs:
 
     - name: Purge CDN Cache
       uses: wei/curl@v1
-      if: steps.changed-files.outputs.any_changed == 'true'
       with:
         args: |
           --location --request POST 'https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache' \
