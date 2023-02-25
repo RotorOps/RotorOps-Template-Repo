@@ -93,13 +93,9 @@ jobs:
       run: echo ${{ env.URLS }}
 
     - name: Purge CDN Cache
-      uses: enflo/curl-action@v1.2
+      uses: fjogeleit/http-request-action@v1
       with:
-        curl: |
-          -H 'Content-Type: application/json' \
-          -H 'Authorization: Bearer ${{ secrets.CLOUDFLARE_API_KEY }}' \
-          -d '{"files": [${{ env.URLS }}]}' \
-          -X POST \
-          https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache
-          
-        
+        url: 'https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache'
+        method: 'POST'
+        customHeaders: '{"Content-Type": "application/json", "Authorization": "Bearer ${{ secrets.CLOUDFLARE_API_KEY }}"'
+        data: '{"files": [${{ env.URLS }}]}'
