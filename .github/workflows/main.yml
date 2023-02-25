@@ -77,8 +77,9 @@ jobs:
         urls=""
         for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
           echo "$file was changed"
-          urls+="'https://dcs-helicopters.com/modules/$file',"
+          urls+="'https://dcs-helicopters.com/user-files/modules/$file',"
         done
+        echo "URLS=${urls}"
         echo "URLS=${urls}" >> $GITHUB_OUTPUT
 
     - name: Print URLs
