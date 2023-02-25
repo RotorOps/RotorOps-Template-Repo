@@ -96,8 +96,10 @@ jobs:
       uses: enflo/curl-action@v1.2
       with:
         curl: |
-          --location --request POST 'https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache' \
-          --header 'Content-Type: application/json' \
-          --header 'Authorization: Bearer ${{ secrets.CLOUDFLARE_API_KEY }}' \
-          --data-raw '{"files": [${{ env.URLS }}]}'
+          -H 'Content-Type: application/json' \
+          -H 'Authorization: Bearer ${{ secrets.CLOUDFLARE_API_KEY }}' \
+          -d '{"files": [${{ env.URLS }}]}' \
+          -X POST \
+          https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache
+          
         
