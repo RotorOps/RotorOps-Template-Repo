@@ -83,10 +83,12 @@ jobs:
         farrstring=$(echo $arrstring | sed -e 's/\[//g' -e 's/\]//g' -e 's/\,//g')
         files_arr=($farrstring)
         urls=""
+        ins_comma=false
         for file in ${files_arr[@]}; do
           file=$(echo $file | sed -e 's/"//g')
           echo "$file was changed"
-          urls+="'https://dcs-helicopters.com/user-files/modules/$file',"
+          if $ins_comma; then urls+=","; ins_comma=true; fi
+          urls+="\"https://dcs-helicopters.com/user-files/modules/$file\""
         done
         echo "URLS=${urls}"
         echo "URLS=${urls}" >> $GITHUB_ENV
