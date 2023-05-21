@@ -1,8 +1,8 @@
 author: Mr. Nobody
-version: 2
+version: 3
 type: scenario
 name: "Mariana Conflict - Rota Landing"
 description: "Queue up 'Fortunate Son' and fire up the miniguns over the jungle.  Napalm not included. Mission template by Mr. Nobody."
-map: Caucasus
+map: Marianas
 tags: 
   - MultiPlayer
