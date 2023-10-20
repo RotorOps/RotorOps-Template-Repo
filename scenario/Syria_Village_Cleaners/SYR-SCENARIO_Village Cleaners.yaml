@@ -1,0 +1,38 @@
+name: "Syria - Village Cleaners"
+author: Shagrat
+version: 1
+type: Scenario
+tags: 
+  - CoOp
+map: Syria
+description: "Suspected bad guys in the villages along the valley. Support the troops advancing on MSR PURPLE to flush them out."
+player_spawn:
+checkboxes:
+    checkboxes:
+    defense_checkBox: false
+    apcs_spawn_checkBox: false
+    logistics_crates_checkBox: false
+    awacs_checkBox: false
+    tankers_checkBox: false
+    zone_sams_checkBox: false
+    smoke_pickup_zone_checkBox: false
+    inf_spawn_voiceovers_checkBox: true
+    game_status_checkBox: false
+    voiceovers_checkBox: true
+    force_offroad_checkBox: false
+disable_checkboxes: zone_sams_checkBox, defense_checkBox, logistics_crates_checkBox, awacs_checkBox, tankers_checkBox
+spinboxes:
+    blueqty_spinBox: 3
+    redqty_spinBox: 2
+    e_attack_helos_spinBox: 0
+    e_attack_planes_spinBox: 0
+    e_transport_helos_spinBox: 0
+    troop_drop_spinBox: 0
+    inf_spawn_spinBox: 5
+radiobuttons: farp_never,
+disable_radiobuttons:
+    farp_always, farp_gunits
+red_forces: "Insurgent_infantry_only"
+blue_forces: "infantry_only"
+start_trigger: false
+end_trigger: false
