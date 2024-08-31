@@ -83,8 +83,9 @@ jobs:
         for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
           file=$(echo $file | sed -e 's/"//g')
           echo "$file was changed"
-          if $ins_comma; then urls+=","; ins_comma=true; fi
+          if $ins_comma; then urls+=", "; fi
           urls+="\"https://dcs-helicopters.com/user-files/modules/$file\""
+          $ins_comma=true;
         done
         echo "URLS=${urls}"
         echo "URLS=${urls}" >> $GITHUB_ENV
