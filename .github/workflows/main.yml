@@ -85,7 +85,7 @@ jobs:
           echo "$file was changed"
           if $ins_comma; then urls+=", "; fi
           urls+="\"https://dcs-helicopters.com/user-files/modules/$file\""
-          $ins_comma=true;
+          ins_comma=true;
         done
         echo "URLS=${urls}"
         echo "URLS=${urls}" >> $GITHUB_ENV
